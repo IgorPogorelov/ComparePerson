@@ -12,7 +12,7 @@ public class Main {
         personList.add(new Person("Fedor", "Sidorov", 17));
         personList.add(new Person("Lena", "Petrova-Sidorova Junior", 9));
 
-        Collections.sort(personList, new PersonComparatop(2));
+        personList.removeIf(x -> x.getAge() < 18 );
         for (Person person : personList) {
             System.out.println(person);
         }
